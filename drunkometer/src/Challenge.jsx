@@ -11,12 +11,12 @@ class Challenge extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 <h2>{this.props.text}</h2>
                 {this.props.hastimer === true && 
                     <Timer timelimit={this.props.timelimit} timer={0}/>
                 }
-            </div>
+            </>
         );
     }
 

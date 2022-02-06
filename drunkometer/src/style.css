@@ -1,0 +1,17 @@
+.game-div{
+    background-color: white;
+}
+
+.start-button{
+    margin:auto;
+    height: auto ;
+    width: 5em ;
+}
+
+.time-controls{
+    padding-bottom:5px;
+}
+
+.start-controls{
+    padding: 2rem
+}

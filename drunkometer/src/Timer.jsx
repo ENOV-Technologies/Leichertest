@@ -29,14 +29,17 @@ class Timer extends React.Component {
 
     render(){
         return (
-            <div>
+            <>
                 {this.state.time >= this.props.timelimit ? <h3>Times Up</h3>
                 : <h3>{this.state.time}</h3>
                 }
-                <button id='timerbtn' onClick={this.timer}>Start</button>
-                <button onClick={this.onPause}>Stop</button>
-                <button onClick={this.onReset}>Reset</button>
-            </div>
+                <div className="btn-group time-controls" role="group" >
+                    <button className="btn btn-success" id='timerbtn' onClick={this.timer}>Start</button>
+                    <button className="btn btn-danger" onClick={this.onPause}>Stop</button>
+                    <button className="btn btn-info" onClick={this.onReset}>Reset</button>
+                </div>
+                <br/>
+            </>
         );
     }
 
