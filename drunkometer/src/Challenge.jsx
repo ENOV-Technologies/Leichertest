@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Timer from './Timer'
 
 class Challenge extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { completed: false, hastimer: false }
         this.text = this.props.text;
+        this.hastimer = this.props.hastimer;
+        this.timelimit = this.props.timelimit;
     }
 
     render() {
         return (
             <div>
                 <h2>{this.props.text}</h2>
-                {this.state.hastimer === true && 
-                    <Timer />
+                {this.props.hastimer === true && 
+                    <Timer timelimit={this.props.timelimit} timer={0}/>
                 }
             </div>
         );
