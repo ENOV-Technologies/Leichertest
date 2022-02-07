@@ -11,4 +11,16 @@ const challenges=[
     { text: 'Ask the barman if you look okay to drive', hastimer: false, timelimit: 0 }
 ]
 
-export default challenges;
+function realShuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * i)
+        let k = array[i]
+        array[i] = array[j]
+        array[j] = k
+    }
+    return array;
+}
+
+const shuffledchallenges = realShuffle(challenges);
+
+export default shuffledchallenges;
